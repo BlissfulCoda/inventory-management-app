@@ -25,7 +25,7 @@ export default function HowItWorksSection() {
                     </div>
                 </div>
 
-                <div className="@2xl:col-span-3 @5xl:col-span-4 grid gap-px">
+                <div className="@2xl:col-span-3 @5xl:col-span-4 grid gap-px bg-border">
                     <FeatureCard className="@max-5xl:h-auto">
                         <FeatureCardContent>
                             <FeatureCardTitle>

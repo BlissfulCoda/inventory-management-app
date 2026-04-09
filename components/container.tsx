@@ -17,7 +17,13 @@ export const Container = ({ className, children, asGrid = false, decorators = 2,
             </div>
             <div className={cn('max-w-276 lg:min-w-276 mx-auto w-full', !asGrid && 'p-[0.5px]')}>
                 {asGrid ? (
-                    <div className={cn('**:data-grid-content:bg-card/90 **:data-grid-content:h-full **:data-grid-content:rounded grid *:p-[0.5px]', className)}>{children}</div>
+                    <div
+                        className={cn(
+                            '**:data-grid-content:bg-card/90 **:data-grid-content:h-full **:data-grid-content:rounded grid *:p-[0.5px] bg-border',
+                            className,
+                        )}>
+                        {children}
+                    </div>
                 ) : (
                     <div
                         data-slot="content"

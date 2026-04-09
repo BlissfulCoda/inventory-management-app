@@ -4,7 +4,7 @@ export const FeatureCard = ({ className, ...props }: React.ComponentProps<'div'>
     return (
         <div
             data-slot="feature-card"
-            className={cn('grid h-full grid-rows-[auto_1fr] gap-px', className)}
+            className={cn('grid h-full grid-rows-[auto_1fr] gap-px bg-border', className)}
             {...props}
         />
     )

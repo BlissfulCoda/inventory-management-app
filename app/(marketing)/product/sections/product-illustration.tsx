@@ -75,8 +75,16 @@ export const ProductIllustration = ({ className }: { className?: string }) => {
     return (
         <div className="relative h-fit">
             <div className="relative mx-auto max-w-4xl px-6">
-                <div className="flex min-h-96 items-center">
-                    <div className={cn('bg-illustration/90 ring-border-illustration from-card/50 relative mx-auto w-full max-w-5xl rounded-2xl border border-transparent p-6 pb-12 shadow-2xl shadow-black/10 ring-1', className)}>
+                <div className="relative flex min-h-96 items-center">
+                    <div
+                        aria-hidden
+                        className="pointer-events-none absolute top-1/2 z-0 hidden size-32 -translate-y-1/2 rounded-2xl bg-sky-400/20 blur-3xl md:block md:-left-6 lg:-left-10"
+                    />
+                    <div
+                        aria-hidden
+                        className="pointer-events-none absolute top-1/2 z-0 hidden size-32 -translate-y-1/2 rounded-2xl bg-sky-400/20 blur-3xl md:block md:-right-6 lg:-right-10"
+                    />
+                    <div className={cn('bg-illustration/90 ring-border-illustration from-card/50 relative z-10 mx-auto w-full max-w-5xl rounded-2xl border border-transparent p-6 pb-12 shadow-2xl shadow-black/10 ring-1', className)}>
                         <div className="max-w-2xs absolute inset-x-0 bottom-4 z-10 mx-auto">
                             <div className="hue-rotate-300 bg-linear-to-r/increasing absolute inset-0 rounded-full from-emerald-400 via-teal-400 to-purple-400 opacity-25 blur"></div>
 
@@ -119,10 +127,10 @@ export const ProductIllustration = ({ className }: { className?: string }) => {
                                                     <span className="text-foreground">{customer.name}</span>
                                                 </div>
                                             </td>
-                                            <td>{customer.date}</td>
+                                            <td className={cn(customer.id === 1 && 'bg-sky-500/12')}>{customer.date}</td>
                                             <td>{customer.revenue}</td>
                                             <td>{customer.arr}</td>
-                                            <td>{customer.mrr}</td>
+                                            <td className={cn(customer.id === 1 && 'bg-sky-500/12')}>{customer.mrr}</td>
                                             <td>{customer.nextBilling}</td>
                                         </tr>
                                     ))}

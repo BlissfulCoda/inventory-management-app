@@ -38,7 +38,7 @@ export function NotesFeatures() {
                 </div>
             </Container>
             <Container asGrid>
-                <div className="@2xl:grid-cols-2 @4xl:grid-cols-10 grid gap-px">
+                <div className="@2xl:grid-cols-2 @4xl:grid-cols-10 grid gap-px bg-border">
                     <div
                         aria-hidden
                         className="@max-4xl:hidden">
@@ -92,7 +92,7 @@ export function NotesFeatures() {
                     className="@max-4xl:hidden">
                     <div data-grid-content />
                 </div>
-                <div className="@4xl:grid-cols-3 @sm:grid-cols-2 col-span-8 grid gap-px">
+                <div className="@4xl:grid-cols-3 @sm:grid-cols-2 col-span-8 grid gap-px bg-border">
                     {subFeatures.map((feature, index) => (
                         <div
                             key={index}

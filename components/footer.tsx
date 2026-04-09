@@ -53,7 +53,7 @@ export default function FooterSection() {
             </Container>
 
             <Container asGrid>
-                <div className="@4xl:grid-cols-5 grid gap-px">
+                <div className="@4xl:grid-cols-5 grid gap-px bg-border">
                     <div
                         data-grid-content
                         className="@4xl:col-span-2 space-y-6 p-6 lg:p-12">
@@ -67,7 +67,7 @@ export default function FooterSection() {
                         <p className="text-muted-foreground text-balance">Tailark is a platform for building AI-powered applications.</p>
                     </div>
 
-                    <div className="@4xl:col-span-3 grid gap-px sm:grid-cols-3">
+                    <div className="@4xl:col-span-3 grid gap-px bg-border sm:grid-cols-3">
                         {links.map((link, index) => (
                             <div
                                 key={index}

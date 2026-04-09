@@ -17,7 +17,7 @@ export default function MarketingLayout({
             <Header />
             <main
                 role="main"
-                className="bg-background">
+                className="tailark-page-grid bg-background min-h-[60vh]">
                 {children}
             </main>
             <FooterSection />

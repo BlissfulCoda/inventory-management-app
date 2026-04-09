@@ -25,7 +25,7 @@ export default function Home() {
                         <span className="text-muted-foreground font-mono text-sm uppercase">Invoicing</span>
                     </Container>
                     <Container asGrid>
-                        <div className="grid grid-cols-10 gap-px">
+                        <div className="grid grid-cols-10 gap-px bg-border">
                             <div
                                 aria-hidden
                                 className="max-sm:hidden">
@@ -65,7 +65,7 @@ export default function Home() {
                                 decorators={6}>
                                 <div
                                     aria-hidden
-                                    className="col-span-full grid grid-cols-10 gap-px">
+                                    className="col-span-full grid grid-cols-10 gap-px bg-border">
                                     {Array.from({ length: 6 }).map((_, i) => (
                                         <div
                                             key={i}
@@ -76,7 +76,7 @@ export default function Home() {
                                 </div>
                                 <div
                                     aria-hidden
-                                    className="col-span-full grid grid-cols-10 gap-px">
+                                    className="col-span-full grid grid-cols-10 gap-px bg-border">
                                     {Array.from({ length: 7 }).map((_, i) => (
                                         <div
                                             key={i}
@@ -87,7 +87,7 @@ export default function Home() {
                                 </div>
                                 <div
                                     aria-hidden
-                                    className="col-span-full grid grid-cols-10 gap-px">
+                                    className="col-span-full grid grid-cols-10 gap-px bg-border">
                                     {Array.from({ length: 6 }).map((_, i) => (
                                         <div
                                             key={i}
@@ -117,7 +117,7 @@ export default function Home() {
                 asGrid
                 className="relative">
                 <h2 className="sr-only">Features</h2>
-                <div className="@2xl:grid-cols-2 @4xl:grid-cols-10 grid gap-px [--color-primary:var(--color-indigo-500)]">
+                <div className="@2xl:grid-cols-2 @4xl:grid-cols-10 grid gap-px bg-border [--color-primary:var(--color-indigo-500)]">
                     <div className="@max-4xl:hidden">
                         <div data-grid-content />
                     </div>

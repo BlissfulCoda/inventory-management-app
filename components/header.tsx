@@ -147,14 +147,14 @@ export default function Header() {
         <>
             <div
                 aria-hidden
-                className="bg-zinc-950/10">
+                className="bg-background">
                 <Separator className="h-6" />
             </div>
             <header
                 role="banner"
                 data-state={isMobileMenuOpen ? 'active' : 'inactive'}
                 {...(isScrolled && { 'data-scrolled': true })}
-                className="lg:data-scrolled:pb-[0.5px] sticky inset-x-0 top-0 z-50 bg-zinc-950/10 max-lg:pb-px">
+                className="sticky inset-x-0 top-0 z-50 border-b border-transparent bg-background/90 backdrop-blur-md transition-[border-color,box-shadow] duration-200 supports-backdrop-filter:bg-background/80 data-scrolled:border-border/60 data-scrolled:shadow-sm max-lg:border-border/40 max-lg:pb-px lg:data-scrolled:pb-0">
                 <div className={cn('w-full max-lg:h-14 max-lg:overflow-hidden', isMobileMenuOpen && 'max-lg:h-screen! max-lg:overflow-visible! bg-background/75 backdrop-blur')}>
                     <Container className="backdrop-blur">
                         <div className="relative flex flex-wrap items-center justify-between px-6 lg:px-12 lg:py-5">
