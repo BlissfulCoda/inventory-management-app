@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useActionState } from "react";
 
+import FormInput from "@/shared/auth/FormInput";
 import { GoogleSignInButton } from "@/components/auth/google-sign-in-button";
 import { signInWithEmail } from "./actions";
 
@@ -24,40 +25,26 @@ export default function SignInPage() {
           <span className="shrink-0 text-xs text-zinc-500">or use email</span>
           <div className="h-px flex-1 bg-zinc-200" />
         </div>
-        <div className="flex flex-col gap-1.5">
-          <label
-            htmlFor="email"
-            className="text-sm font-medium text-zinc-700"
-          >
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            className="rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none ring-zinc-300 focus:ring-2"
-            placeholder="you@example.com"
-          />
-        </div>
-        <div className="flex flex-col gap-1.5">
-          <label
-            htmlFor="password"
-            className="text-sm font-medium text-zinc-700"
-          >
-            Password
-          </label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            required
-            autoComplete="current-password"
-            className="rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none ring-zinc-300 focus:ring-2"
-            placeholder="••••••••"
-          />
-        </div>
+
+        <FormInput
+          htmlFor="email"
+          label="email"
+          id="email"
+          inputName="email"
+          inputType="email"
+          autoComplete="email"
+          placeholder="you@example.com"
+        />
+        <FormInput
+          htmlFor="password"
+          label="password"
+          id="password"
+          inputName="password"
+          inputType="password"
+          autoComplete="current-password"
+          placeholder="••••••••"
+        />
+
         {state?.error ? (
           <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">
             {state.error}
@@ -80,10 +67,7 @@ export default function SignInPage() {
           Create one
         </Link>
       </p>
-      <Link
-        href="/"
-        className="text-xs text-indigo-800 hover:text-indigo-700"
-      >
+      <Link href="/" className="text-xs text-indigo-800 hover:text-indigo-700">
         Go back home
       </Link>
     </div>
