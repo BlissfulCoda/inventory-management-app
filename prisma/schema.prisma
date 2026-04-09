@@ -5,10 +5,15 @@
 
 generator client {
   provider = "prisma-client"
-  output   = "../lib/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
+}
+
+
+model Product {
+  id String @id @default(cuid())
+  userId String
 }
 

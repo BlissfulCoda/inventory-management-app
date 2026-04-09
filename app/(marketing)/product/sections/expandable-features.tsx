@@ -226,7 +226,7 @@ export function ExpandableFeatures() {
           >
             <div className="relative mt-auto max-w-xl">
               <p className="text-foreground max-w-xs text-balance">
-                "Looks really good. Did you design in code or Figma first?"
+                {"Looks really good. Did you design in code or Figma first?"}
               </p>
 
               <div className="mt-4 flex items-center gap-2">
